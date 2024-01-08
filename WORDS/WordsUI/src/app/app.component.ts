@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { WordComponent } from './word/word.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   imports: [
     CommonModule,
     RouterOutlet,
-    MatToolbarModule
+    MatToolbarModule,
+    WordComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

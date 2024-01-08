@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { MessagesComponent } from './messages/messages.component';
-
-import { AppRoutingModule } from './app-routing.module';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     CommonModule,
     RouterOutlet,
-    MessagesComponent,
-    FormsModule,
-    AppRoutingModule
+    MatToolbarModule
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'WordsUI';
 }

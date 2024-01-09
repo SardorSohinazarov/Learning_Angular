@@ -5,7 +5,7 @@
     <div class="words">
         @for (word of filteredwords; track word.newword) 
         { 
-            <app-word  [word]="word"></app-word>
+            <app-word [routerLink]="['/details/'+word.newword]" [word]="word"></app-word>
         }
     </div>
 </main>

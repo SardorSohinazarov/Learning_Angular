@@ -5,6 +5,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './Components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { DetailsComponent } from './Components/details/details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { DetailsComponent } from './Components/details/details.component';
     MatToolbarModule,
     HomeComponent,
     RouterModule,
-    DetailsComponent
+    DetailsComponent,
+    ReactiveFormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

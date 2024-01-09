@@ -1,2 +1,16 @@
-<p>details works!</p>
-<app-word [word]="word"></app-word>
+<div class="grid-container">
+    <div class="grid-item">
+        <form [formGroup]="form" (submit)="Send()">
+            <label for="email">email</label>
+            <input placeholder="Name ..." id="email" formControlName="email">
+            
+            <label for="comment">comment</label>
+            <input placeholder="Comment ..." id="comment" formControlName="comment">    
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <div class="grid-item">
+        <app-word [word]="word"></app-word>
+    </div> 
+  </div>

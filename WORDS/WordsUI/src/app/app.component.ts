@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { WordComponent } from './word/word.component';
+import { HomeComponent } from './Components/home/home.component';
+import { RouterModule } from '@angular/router';
+import { DetailsComponent } from './Components/details/details.component';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +13,13 @@ import { WordComponent } from './word/word.component';
     CommonModule,
     RouterOutlet,
     MatToolbarModule,
-    WordComponent
+    HomeComponent,
+    RouterModule,
+    DetailsComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers:[]
 })
 export class AppComponent {
   title = 'WordsUI';

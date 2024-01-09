@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><b>{{word.newword}}</b></mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="word.photo" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <h2>
+        {{word.translation}}
+      </h2>
+      <p>
+        {{word.example}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+
+    <a [routerLink]="['/details/'+word.newword]">Learn More</a>
+  </mat-card>

@@ -1,0 +1,11 @@
+<main>
+    <input type="text" placeholder="izla.." #input>
+    <button (click)="Search(input.value)">Qidirish</button>
+
+    <div class="words">
+        @for (word of filteredwords; track word.newword) 
+        { 
+            <app-word  [word]="word"></app-word>
+        }
+    </div>
+</main>

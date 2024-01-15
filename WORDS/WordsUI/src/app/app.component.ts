@@ -6,6 +6,8 @@ import { HomeComponent } from './Components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { DetailsComponent } from './Components/details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     RouterModule,
     DetailsComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

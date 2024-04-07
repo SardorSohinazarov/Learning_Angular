@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../Components/card/card.component';
+import { Card } from '../../Interfaces/card';
+import { CardsService } from '../../Services/cards.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +13,9 @@ import { CardComponent } from '../../Components/card/card.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private cardService:CardsService){
 
+  }
+
+  cards:Card[] = this.cardService.GetAllCards();
 }

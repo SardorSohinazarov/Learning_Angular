@@ -42,13 +42,8 @@
 
   <div class="mt-5">
     <div class="container d-flex flex-wrap justify-content-center">
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
+        @for(card of cards;track card.title) {
+            <app-card [card]='card'></app-card>
+        }
     </div>
 </div>

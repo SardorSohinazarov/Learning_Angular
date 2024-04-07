@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-login',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.sass'
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.sass'
 })
-export class HeaderComponent {
+export class LoginComponent {
 
 }

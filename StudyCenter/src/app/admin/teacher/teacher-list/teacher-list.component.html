@@ -1,0 +1,43 @@
+<button class="add-button mb-1" [routerLink]="['/admin/teacher/add']" nz-button nzType="primary">Add</button>
+
+<nz-table #fixedTable [nzData]="specialities" [nzScroll]="{ x: '2000px', y: '1000px' }" ngSkipHydration>
+    <thead>
+      <tr>
+        <th nzLeft>Full Name</th>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+        <th>Column 5</th>
+        <th>Column 6</th>
+        <th>Column 7</th>
+        <th>Column 8</th>
+        <th>Column 9</th>
+        <th>Column 10</th>
+        <th nzRight>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!--*ngFor="let data of fixedTable.data"-->
+        @for(data of fixedTable.data;track data.name) {
+            <tr>
+                <td nzLeft>{{ data.name }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzBreakWord>{{ data.description }}</td>
+                <td nzRight>
+                    <a><span [routerLink]="['/admin/teacher/edit/',data.id]" nz-icon nzType="edit" nzTheme="outline"></span></a>
+                    <a><span (click)="DeleteSpeciality(data.id)" nz-icon nzType="delete" nzTheme="outline"></span></a>
+                    <a><span [routerLink]="['/admin/teacher']" nz-icon nzType="home" nzTheme="outline"></span></a>
+                </td>
+            </tr>
+        }
+</tbody>
+  </nz-table>

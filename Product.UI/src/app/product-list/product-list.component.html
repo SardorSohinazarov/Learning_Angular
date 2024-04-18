@@ -1,0 +1,10 @@
+<div [routerLink]="['/home/products/add']" class="btn btn-primary">Add</div>
+
+@for (product of listOfData; track product.id) 
+{
+  <div class="my-5">
+    <h1 [routerLink]="['/home/products',product.id]">   {{ product.name }}</h1>
+    <button [routerLink]="['/home/products/update/',product.id]" class="btn btn-primary">Update</button>
+    <button class="btn btn-primary" (click)="Delete(product.id)">Delete</button>
+  </div>
+}
